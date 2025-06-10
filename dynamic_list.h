@@ -7,12 +7,13 @@
 
 void createEmptyList(lista_clientes *);
 bool isEmptyList(lista_clientes);
-client_info get_client(lista_clientes *, SOCKET_CLIENT);
+client_info *get_client(lista_clientes *, SOCKET_CLIENT);
 void drop_client(lista_clientes *, SOCKET_CLIENT);
 char * get_client_address(client_info);
 fd_set wait_on_clients(lista_clientes, SERVER);
 void send_400(lista_clientes *, client_info);
 void send_404(lista_clientes *, client_info);
+client_info * make_client(SOCKET_CLIENT);
 
 
 //TODO: serve_source()
